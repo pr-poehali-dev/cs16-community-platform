@@ -99,3 +99,52 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom CS 1.6 animations */
+@keyframes pulse-tactical {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glow-orange {
+  0%,
+  100% {
+    box-shadow: 0 0 5px #ff6b00;
+  }
+  50% {
+    box-shadow:
+      0 0 20px #ff6b00,
+      0 0 30px #ff6b00;
+  }
+}
+
+.pulse-tactical {
+  animation: pulse-tactical 2s ease-in-out infinite;
+}
+
+.glow-orange {
+  animation: glow-orange 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c5530;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b00;
+}
